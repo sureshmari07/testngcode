@@ -1,0 +1,907 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/10</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Sep 22 14:36:02 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>115 seconds (115992 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestLayer.BuyerPortal_FavouritePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_FavouritePageTest<br>Parameters: [TestResult name=signInPageTest status=FAILURE method=BuyerPortal_FavouritePageTest.signInPageTest()[pri:1, instance:TestLayer.BuyerPortal_FavouritePageTest@1bd4fdd] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1268786037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1268786037'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_FavouritePageTest@1bd4fdd</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest<br>Parameters: [TestResult name=signInPageTest status=FAILURE method=BuyerPortal_ComparePageTest.signInPageTest()[pri:1, instance:TestLayer.BuyerPortal_ComparePageTest@35e2d654] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace480230241", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace480230241'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestLayer.BuyerPortal_FavouritePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_FavouritePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_FavouritePageTest@1bd4fdd</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.testName()'><b>testName</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.testName()'><b>testName</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.testName()'><b>testName</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.testName()'><b>testName</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_FavouritePageTest.testName()'><b>testName</b><br>Test class: TestLayer.BuyerPortal_FavouritePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_FavouritePageTest@1bd4fdd</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.testName()'><b>testName</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_FavouritePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_FavouritePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_FavouritePageTest@1bd4fdd</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_FavouritePageTest.testName()'><b>testName</b><br>Test class: TestLayer.BuyerPortal_FavouritePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_FavouritePageTest@1bd4fdd</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.testName()'><b>testName</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.tearDown()'><b>tearDown</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.testName()'><b>testName</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.testName()'><b>testName</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestLayer.BuyerPortal_FavouritePageTest.signInPageTest()'><b>signInPageTest</b><br>Test class: TestLayer.BuyerPortal_FavouritePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.properties&quot; is null
+	at TestLayer.BuyerPortal_FavouritePageTest.signInPageTest(BuyerPortal_FavouritePageTest.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace853955254", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace853955254'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.properties&quot; is null
+	at TestLayer.BuyerPortal_FavouritePageTest.signInPageTest(BuyerPortal_FavouritePageTest.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_FavouritePageTest@1bd4fdd</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_LandingPagetest.searchpage()'><b>searchpage</b><br>Test class: TestLayer.BuyerPortal_LandingPagetest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for condition (element to be clickable: By.xpath: //div[@role=&quot;button&quot;]) to be refreshed (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at BuyerPortal.qa.testing.ReusableFunction.clickOn(ReusableFunction.java:619)
+	at BuyerPortal.qa.testing.BuyerPortal_searchPage1.searchpage2(BuyerPortal_searchPage1.java:104)
+	at TestLayer.BuyerPortal_LandingPagetest.searchpage(BuyerPortal_LandingPagetest.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@role=&quot;button&quot;]&quot;}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-4KADTEQ&apos;, ip: &apos;192.168.43.81&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50085}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e2790b85c051b10ceb21c2665de56e0f
+*** Element info: {Using=xpath, value=//div[@role=&quot;button&quot;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.ExpectedConditions$25.apply(ExpectedConditions.java:731)
+	at org.openqa.selenium.support.ui.ExpectedConditions$25.apply(ExpectedConditions.java:727)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace464994546", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace464994546'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for condition (element to be clickable: By.xpath: //div[@role=&quot;button&quot;]) to be refreshed (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at BuyerPortal.qa.testing.ReusableFunction.clickOn(ReusableFunction.java:619)
+	at BuyerPortal.qa.testing.BuyerPortal_searchPage1.searchpage2(BuyerPortal_searchPage1.java:104)
+	at TestLayer.BuyerPortal_LandingPagetest.searchpage(BuyerPortal_LandingPagetest.java:113)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@role=&quot;button&quot;]&quot;}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-4KADTEQ&apos;, ip: &apos;192.168.43.81&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50085}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e2790b85c051b10ceb21c2665de56e0f
+*** Element info: {Using=xpath, value=//div[@role=&quot;button&quot;]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.ExpectedConditions$25.apply(ExpectedConditions.java:731)
+	at org.openqa.selenium.support.ui.ExpectedConditions$25.apply(ExpectedConditions.java:727)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+</pre></div></td>
+<td>114</td>
+<td>TestLayer.BuyerPortal_LandingPagetest@1b7cc17c</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.signInPageTest()'><b>signInPageTest</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.properties&quot; is null
+	at TestLayer.BuyerPortal_ComparePageTest.signInPageTest(BuyerPortal_ComparePageTest.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1134443700", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1134443700'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.properties&quot; is null
+	at TestLayer.BuyerPortal_ComparePageTest.signInPageTest(BuyerPortal_ComparePageTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.comparePage01()'><b>comparePage01</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1264191370", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1264191370'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.contactSupplier()'><b>contactSupplier</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1320248993", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1320248993'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_FavouritePageTest.favPage1()'><b>favPage1</b><br>Test class: TestLayer.BuyerPortal_FavouritePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1760443245", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1760443245'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_FavouritePageTest@1bd4fdd</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.compare()'><b>compare</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1382756158", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1382756158'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_FavouritePageTest.loginsearchPageTest()'><b>loginsearchPageTest</b><br>Test class: TestLayer.BuyerPortal_FavouritePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace855277727", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace855277727'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_FavouritePageTest@1bd4fdd</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.contactSupplier1()'><b>contactSupplier1</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace236220307", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace236220307'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.contactSupplier12()'><b>contactSupplier12</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace395607661", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace395607661'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.requestQuote()'><b>requestQuote</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace965778714", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace965778714'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.contactSupplier11()'><b>contactSupplier11</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1011920203", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1011920203'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+<tr>
+<td title='TestLayer.BuyerPortal_ComparePageTest.requestQuote1()'><b>requestQuote1</b><br>Test class: TestLayer.BuyerPortal_ComparePageTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace905159212", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace905159212'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;tks&quot; is null
+	at instrive.qa.testing.ReusableFunction.captureScreenShot(ReusableFunction.java:578)
+	at TestLayer.BaseTest.tearDown(BaseTest.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestLayer.BuyerPortal_ComparePageTest@35e2d654</td></tr>
+</table><p>
+</body>
+</html>
