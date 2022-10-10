@@ -38,6 +38,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import BuyerPortal.qa.testing.BuyerPortal_BusinessOnboardingPage;
 import BuyerPortal.qa.testing.BuyerPortal_FavouritePage;
 import BuyerPortal.qa.testing.BuyerPortal_LandingPage;
 import BuyerPortal.qa.testing.BuyerPortal_ProductComparePage;
@@ -99,6 +100,7 @@ public class BaseTest  {
 	public BuyerPortal_RequestQuote requestQuote;
 	public BuyerPortal_ProductComparePage ProductComparePage;
 	public BuyerPortal_FavouritePage FavouritePage ; 
+	public BuyerPortal_BusinessOnboardingPage businessPage ;
 	
 	public static String classname=null;
 	public static String testname;
@@ -142,6 +144,7 @@ public class BaseTest  {
 	   requestQuote=new BuyerPortal_RequestQuote(driver);
 	   ProductComparePage=new BuyerPortal_ProductComparePage(driver);
 	   FavouritePage=new BuyerPortal_FavouritePage(driver);
+	   businessPage=new BuyerPortal_BusinessOnboardingPage(driver);
 	   
 	   landinpage=new BuyerPortal_LandingPage(driver);
 	   searchpage=new BuyerPortal_searchPage1(driver);

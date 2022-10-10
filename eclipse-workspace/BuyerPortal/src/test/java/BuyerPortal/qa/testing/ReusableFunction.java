@@ -94,7 +94,8 @@ public static  File file;
 	
 	try {
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		findElement(locator).sendKeys(text);
+		WebElement element=findElement(locator);
+		element.sendKeys(text);
 		System.out.println("Enter a value : " + text) ;
 		childtest.log(Status.PASS,"Enter a value : "+ text);
 		
@@ -162,7 +163,7 @@ public static  File file;
 		    	  childtest.log(Status.FAIL,"image not present ");
 		      }
 	}
-	
+	//clicking all elements
 	public void clickingallelements(By locator) {
 	try {
 		ArrayList<WebElement> element = (ArrayList<WebElement>) driver.findElements(locator);	
@@ -441,6 +442,52 @@ public static void uploadFileAutoit(String filepath) {
 		}
 		
 	}
+//upload file using sendkeys 
+public  void uploadSendkeyss(By locator,String text)
+{
+
+try {
+	WebDriverWait wait = new WebDriverWait(driver, 30);
+	wait.until(ExpectedConditions.visibilityOf(element)); 
+	WebElement chooseFile = driver.findElement(locator);
+	chooseFile.sendKeys(text);
+	
+	System.out.println("Enter a value : " + text) ;
+	childtest.log(Status.PASS,"Enter a value : "+ text);
+	
+} catch (Exception e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+	System.out.println("unable to perform sendkeys on : "+text);
+	childtest.log(Status.INFO,"unable to perform sendkeys on "+text);
+}}
+//upload file using robot class
+public  void uploadrobot(By locator,String text) throws InterruptedException, AWTException
+{
+WebElement browse = driver.findElement(locator);
+// using linkText, to click on browse element 
+browse.click(); // Click on browse option on the webpage
+Thread.sleep(2000); // suspending execution for specified time period
+
+// creating object of Robot class
+Robot rb = new Robot();
+
+// copying File path to Clipboard
+StringSelection str = new StringSelection(text);
+Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
+
+// press Contol+V for pasting
+rb.keyPress(KeyEvent.VK_CONTROL);
+rb.keyPress(KeyEvent.VK_V);
+
+// release Contol+V for pasting
+rb.keyRelease(KeyEvent.VK_CONTROL);
+rb.keyRelease(KeyEvent.VK_V);
+
+// for pressing and releasing Enter
+rb.keyPress(KeyEvent.VK_ENTER);
+rb.keyRelease(KeyEvent.VK_ENTER);
+}
 //inserting new text	
 	public void insertText(By locator, String value) {
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
@@ -860,6 +907,25 @@ e.printStackTrace();
 public  void arrowdown (By locator) {
 	
 try {
+driver.findElement(locator).sendKeys(Keys.ARROW_DOWN);
+driver.findElement(locator).sendKeys(Keys.ENTER);
+} catch (Exception e) {
+		// TODO Auto-generated catch block
+e.printStackTrace();
+}
+}
+public  void multipleArrowDown (By locator) {
+	
+try {
+driver.findElement(locator).sendKeys(Keys.ARROW_DOWN);
+driver.findElement(locator).sendKeys(Keys.ENTER);
+driver.findElement(locator).sendKeys(Keys.ARROW_DOWN);
+driver.findElement(locator).sendKeys(Keys.ARROW_DOWN);
+driver.findElement(locator).sendKeys(Keys.ENTER);
+driver.findElement(locator).sendKeys(Keys.ARROW_DOWN);
+driver.findElement(locator).sendKeys(Keys.ARROW_DOWN);
+driver.findElement(locator).sendKeys(Keys.ENTER);
+driver.findElement(locator).sendKeys(Keys.ARROW_DOWN);
 driver.findElement(locator).sendKeys(Keys.ARROW_DOWN);
 driver.findElement(locator).sendKeys(Keys.ENTER);
 } catch (Exception e) {
